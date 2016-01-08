@@ -22,6 +22,24 @@ private slots:
 
     void on_BadConnection__clicked(bool checked);
 
+    void on_checkBox_6_clicked(bool checked);
+
+    void on_spinBox_valueChanged(int arg1);
+
+    void on_checkBox_clicked(bool checked);
+
+    void on_checkBox_2_clicked(bool checked);
+
+    void on_checkBox_3_clicked(bool checked);
+
+    void on_checkBox_4_clicked(bool checked);
+
+    void on_checkBox_5_clicked(bool checked);
+
+    void setTextEdit();
+
+    void AppendText(QString text);
+
 private:
     Ui::MainWindow *ui;
 };

@@ -82,10 +82,16 @@
             <property name="text">
              <string>Good Connection</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="0">
            <widget class="QCheckBox" name="BadConnection_">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Bad Connection</string>
             </property>
@@ -107,12 +113,18 @@
             <property name="text">
              <string>Sprays</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="0">
            <widget class="QCheckBox" name="checkBox_2">
             <property name="text">
              <string>Shadows</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -121,6 +133,9 @@
             <property name="text">
              <string>Facial features</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="3" column="0">
@@ -128,12 +143,18 @@
             <property name="text">
              <string>Ragdolls</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="4" column="0">
            <widget class="QCheckBox" name="checkBox_5">
             <property name="text">
              <string>Gibs</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -150,6 +171,9 @@
           </item>
           <item row="4" column="0">
            <widget class="QSpinBox" name="spinBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="maximum">
              <number>10000</number>
             </property>

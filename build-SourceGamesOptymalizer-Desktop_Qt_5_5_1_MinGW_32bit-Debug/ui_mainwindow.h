@@ -118,11 +118,13 @@ public:
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         GoodConnection_ = new QCheckBox(tab_2);
         GoodConnection_->setObjectName(QStringLiteral("GoodConnection_"));
+        GoodConnection_->setChecked(true);
 
         gridLayout_3->addWidget(GoodConnection_, 0, 0, 1, 1);
 
         BadConnection_ = new QCheckBox(tab_2);
         BadConnection_->setObjectName(QStringLiteral("BadConnection_"));
+        BadConnection_->setEnabled(false);
 
         gridLayout_3->addWidget(BadConnection_, 1, 0, 1, 1);
 
@@ -141,26 +143,31 @@ public:
         formLayout->setObjectName(QStringLiteral("formLayout"));
         checkBox = new QCheckBox(tab_2);
         checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setChecked(true);
 
         formLayout->setWidget(0, QFormLayout::LabelRole, checkBox);
 
         checkBox_2 = new QCheckBox(tab_2);
         checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
+        checkBox_2->setChecked(true);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, checkBox_2);
 
         checkBox_3 = new QCheckBox(tab_2);
         checkBox_3->setObjectName(QStringLiteral("checkBox_3"));
+        checkBox_3->setChecked(true);
 
         formLayout->setWidget(2, QFormLayout::LabelRole, checkBox_3);
 
         checkBox_4 = new QCheckBox(tab_2);
         checkBox_4->setObjectName(QStringLiteral("checkBox_4"));
+        checkBox_4->setChecked(true);
 
         formLayout->setWidget(3, QFormLayout::LabelRole, checkBox_4);
 
         checkBox_5 = new QCheckBox(tab_2);
         checkBox_5->setObjectName(QStringLiteral("checkBox_5"));
+        checkBox_5->setChecked(true);
 
         formLayout->setWidget(4, QFormLayout::LabelRole, checkBox_5);
 
@@ -177,6 +184,7 @@ public:
 
         spinBox = new QSpinBox(tab_2);
         spinBox->setObjectName(QStringLiteral("spinBox"));
+        spinBox->setEnabled(false);
         spinBox->setMaximum(10000);
         spinBox->setValue(50);
 
