@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
+#include <QClipboard>
 
 namespace Ui {
 class MainWindow;
@@ -39,6 +43,10 @@ private slots:
     void setTextEdit();
 
     void AppendText(QString text);
+
+    void Save();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

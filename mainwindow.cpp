@@ -43,6 +43,23 @@ void MainWindow::AppendText(QString text){
     ui->textEdit->append(text);
 }
 
+void MainWindow::Save(){
+    QMessageBox msgBox;
+    msgBox.setText("Do you want to save your config?");
+    msgBox.setInformativeText("");
+    msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
+    msgBox.setDefaultButton(QMessageBox::Save);
+    if(msgBox.exec() == QMessageBox::Save){
+
+      // save
+        QFile file("C:/Program Files (x86)/Steam/steamapps/common/GarrysMod/garrysmod/cfg/autoexec.cfg");
+            file.open(QIODevice::WriteOnly | QIODevice::Text);
+            QTextStream out(&file);
+            out << ui->textEdit->toPlainText();
+            file.close();
+    }
+}
+
 void MainWindow::setTextEdit(){
     ui->textEdit->clear();
     if(GoodConnection){
@@ -171,4 +188,8 @@ void MainWindow::on_checkBox_4_clicked(bool checked){
 void MainWindow::on_checkBox_5_clicked(bool checked){
     Gibs = checked;
     setTextEdit();
+}
+
+void MainWindow::on_pushButton_clicked(){
+    Save();
 }
