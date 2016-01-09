@@ -9,3 +9,5 @@ It's application which optymalizing games on source engine, I'm targeting to Gar
 * Go to tab called **Code** and press **Save** button or use **config > save** in toolbar, also you can use **save as** if you want to do it for your friend or backup
 * **Enjoy**
 
+### Check it on steam and rate
+* http://steamcommunity.com/sharedfiles/filedetails/?id=596721584
