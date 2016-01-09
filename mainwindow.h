@@ -6,6 +6,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QClipboard>
+#include <QFileDialog>
 
 namespace Ui {
 class MainWindow;
@@ -45,8 +46,13 @@ private slots:
     void AppendText(QString text);
 
     void Save();
+    void SaveAs();
 
     void on_pushButton_clicked();
+
+    void on_actionSave_triggered();
+
+    void on_actionSave_As_triggered();
 
 private:
     Ui::MainWindow *ui;

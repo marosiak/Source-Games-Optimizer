@@ -35,6 +35,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionSave;
+    QAction *actionSave_As;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout;
     QTabWidget *tabWidget;
@@ -71,6 +72,8 @@ public:
         MainWindow->setMaximumSize(QSize(394, 206));
         actionSave = new QAction(MainWindow);
         actionSave->setObjectName(QStringLiteral("actionSave"));
+        actionSave_As = new QAction(MainWindow);
+        actionSave_As->setObjectName(QStringLiteral("actionSave_As"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -207,6 +210,7 @@ public:
 
         menuBar->addAction(menuConfig->menuAction());
         menuConfig->addAction(actionSave);
+        menuConfig->addAction(actionSave_As);
 
         retranslateUi(MainWindow);
 
@@ -220,6 +224,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         actionSave->setText(QApplication::translate("MainWindow", "Save", 0));
+        actionSave_As->setText(QApplication::translate("MainWindow", "Save As", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Save", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Code", 0));
         GoodConnection_->setText(QApplication::translate("MainWindow", "Good Connection", 0));

@@ -43,6 +43,16 @@ void MainWindow::AppendText(QString text){
     ui->textEdit->append(text);
 }
 
+void MainWindow::SaveAs(){
+        QString filename = QFileDialog::getSaveFileName(this, "Save File", "", "CFG Files (*.cfg)");
+        QFile file(filename);
+            file.open(QIODevice::WriteOnly | QIODevice::Text);
+            QTextStream out(&file);
+            out << ui->textEdit->toPlainText();
+            file.close();
+
+}
+
 void MainWindow::Save(){
     QMessageBox msgBox;
     msgBox.setText("Do you want to save your config?");
@@ -192,4 +202,12 @@ void MainWindow::on_checkBox_5_clicked(bool checked){
 
 void MainWindow::on_pushButton_clicked(){
     Save();
+}
+
+void MainWindow::on_actionSave_triggered(){
+    Save();
+}
+
+void MainWindow::on_actionSave_As_triggered(){
+    SaveAs();
 }
